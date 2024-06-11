@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sensores</string>
+    <string name="motion_tab_title">Movimento</string>
+    <string name="position_tab_title">Posição</string>
+    <string name="environment_tab_title">Ambiente</string>
+    <string name="accelerometer_sensor_name">Acelerômetro:</string>
+    <string name="x_axis_name" translatable="false">X:</string>
+    <string name="y_axis_name" translatable="false">Y:</string>
+    <string name="z_axis_name" translatable="false">Z:</string>
+    <string name="not_available_text">ND</string>
+    <string name="magnetic_field_sensor_name">Campo Magnético</string>
+    <string name="ambient_temp_sensor_name">Temperatura Ambiente</string>
+    <string name="value_label">Valor:</string>
+    <string name="gravity_sensor_name">Gravidade:</string>
+    <string name="gyroscope_sensor_name">Giroscópio:</string>
+    <string name="light_sensor_name">Luminosidade:</string>
+    <string name="linear_acceleration_sensor_name">Aceleração Linear:</string>
+    <string name="pressure_sensor_name">Pressão Atmosférica:</string>
+    <string name="proximity_sensor_name">Proximidade:</string>
+    <string name="relative_humidity_sensor_name">Umidade Relativa:</string>
+    <string name="step_counter_sensor_name">Contador de Passos:</string>
+    <string name="location_sensor_name">Localização:</string>
+    <string name="latitude_name">Latitude:</string>
+    <string name="longitude_name">Longitude:</string>
+</resources>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentGeneralStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.leonardo.apps.sensors.MotionSensorsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAccelerometerName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/accelerometer_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAccXName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/x_axis_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+            <TextView
+                android:id="@+id/tvAccXValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvAccXName"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+            <TextView
+                android:id="@+id/tvAccYName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/y_axis_name"
+                app:layout_constraintStart_toEndOf="@+id/tvAccXValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+            <TextView
+                android:id="@+id/tvAccYValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvAccYName"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+            <TextView
+                android:id="@+id/tvAccZName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/z_axis_name"
+                app:layout_constraintStart_toEndOf="@+id/tvAccYValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+            <TextView
+                android:id="@+id/tvAccZValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvAccZName"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccelerometerName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvGravYName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/y_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvGravXValue"
+                app:layout_constraintTop_toBottomOf="@id/tvGravityName" />
+
+            <TextView
+                android:id="@+id/tvGravYValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvGravYName"
+                app:layout_constraintTop_toBottomOf="@id/tvGravityName" />
+
+            <TextView
+                android:id="@+id/tvGravZName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/z_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvGravYValue"
+                app:layout_constraintTop_toBottomOf="@id/tvGravityName" />
+
+            <TextView
+                android:id="@+id/tvGravZValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvGravZName"
+                app:layout_constraintTop_toBottomOf="@id/tvGravityName" />
+
+            <TextView
+                android:id="@+id/tvGravityName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/gravity_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGravXName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/x_axis_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGravityName" />
+
+            <TextView
+                android:id="@+id/tvGravXValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvGravXName"
+                app:layout_constraintTop_toBottomOf="@+id/tvGravityName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvGyroscopeName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/gyroscope_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGyrXName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/x_axis_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+
+            <TextView
+                android:id="@+id/tvGyrXValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvGyrXName"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+
+            <TextView
+                android:id="@+id/tvGyrYName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/y_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvGyrXValue"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+
+            <TextView
+                android:id="@+id/tvGyrYValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvGyrYName"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+
+            <TextView
+                android:id="@+id/tvGyrZName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/z_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvGyrYValue"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+
+            <TextView
+                android:id="@+id/tvGyrZValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvGyrZName"
+                app:layout_constraintTop_toBottomOf="@id/tvGyroscopeName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLinearAccName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/linear_acceleration_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLinAccXName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/x_axis_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+
+            <TextView
+                android:id="@+id/tvLinAccXValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvLinAccXName"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+
+            <TextView
+                android:id="@+id/tvLinAccYName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/y_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvLinAccXValue"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+
+            <TextView
+                android:id="@+id/tvLinAccYValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvLinAccYName"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+
+            <TextView
+                android:id="@+id/tvLinAccZName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/z_axis_name"
+                app:layout_constraintStart_toEndOf="@id/tvLinAccYValue"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+
+            <TextView
+                android:id="@+id/tvLinAccZValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvLinAccZName"
+                app:layout_constraintTop_toBottomOf="@id/tvLinearAccName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvStepCounterName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/step_counter_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStepCounterValName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/value_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStepCounterName" />
+
+            <TextView
+                android:id="@+id/tvStepCounterValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvStepCounterValName"
+                app:layout_constraintTop_toBottomOf="@id/tvStepCounterName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

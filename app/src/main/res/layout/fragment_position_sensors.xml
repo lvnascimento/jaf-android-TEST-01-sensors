@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentGeneralStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.leonardo.apps.sensors.PositionSensorsFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvMagneticFieldName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/magnetic_field_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMagFXName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/x_axis_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+            <TextView
+                android:id="@+id/tvMagFXValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvMagFXName"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+            <TextView
+                android:id="@+id/tvMagFYName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/y_axis_name"
+                app:layout_constraintStart_toEndOf="@+id/tvMagFXValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+            <TextView
+                android:id="@+id/tvMagFYValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvMagFYName"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+            <TextView
+                android:id="@+id/tvMagFZName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/z_axis_name"
+                app:layout_constraintStart_toEndOf="@+id/tvMagFYValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+            <TextView
+                android:id="@+id/tvMagFZValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@+id/tvMagFZName"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagneticFieldName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvProximityName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/proximity_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProximityValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvProximityValName"
+                app:layout_constraintTop_toBottomOf="@id/tvProximityName" />
+
+            <TextView
+                android:id="@+id/tvProximityValName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/value_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProximityName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLocationName"
+                style="@style/SensorLabelsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/location_sensor_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLocationLonName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/longitude_name"
+                app:layout_constraintStart_toEndOf="@id/tvLatitudeValue"
+                app:layout_constraintTop_toBottomOf="@id/tvLocationName" />
+
+            <TextView
+                android:id="@+id/tvLocationLatName"
+                style="@style/SensorAxisStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/latitude_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLocationName" />
+
+            <TextView
+                android:id="@+id/tvLatitudeValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvLocationLatName"
+                app:layout_constraintTop_toBottomOf="@id/tvLocationName" />
+
+            <TextView
+                android:id="@+id/tvLongitudeValue"
+                style="@style/SensorValuesStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_available_text"
+                app:layout_constraintStart_toEndOf="@id/tvLocationLonName"
+                app:layout_constraintTop_toBottomOf="@id/tvLocationName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
