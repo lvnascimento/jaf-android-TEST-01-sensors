@@ -26,17 +26,12 @@ import javax.measure.Quantity;
 
 import br.edu.leonardo.jaf.Agent;
 import br.edu.leonardo.jaf.AgentException;
-import br.edu.leonardo.jaf.sensors.LocationSensorValue;
-import br.edu.leonardo.jaf.Process;
+import br.edu.leonardo.jaf.Behaviour;
 import br.edu.leonardo.jaf.R;
 import br.edu.leonardo.jaf.sensors.Sensor;
 import br.edu.leonardo.jaf.sensors.SensorNotification;
 import br.edu.leonardo.jaf.sensors.SensorValue;
-import br.edu.leonardo.jaf.sensors.SingleSensorValue;
-import br.edu.leonardo.jaf.sensors.ThreeAxisSensorValue;
-import br.edu.leonardo.jaf.android.AndroidDeviceSensor;
 import br.edu.leonardo.jaf.android.AndroidDeviceSensorFactory;
-import br.edu.leonardo.jaf.android.AndroidLocationSensor;
 import tec.units.ri.quantity.Quantities;
 import tec.units.ri.unit.MetricPrefix;
 import tec.units.ri.unit.Units;
@@ -147,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
             // Add sensor to the agent.
             a.addSensor(sensor);
 
-            // Create and add a process to be executed when the sensor notifies values to the agent.
-            a.addProcess(new Process() {
+            // Create and add a behaviour to be executed when the sensor notifies values to the agent.
+            a.addBehaviour(new Behaviour() {
                 @Override
                 public void execute(SensorNotification notification) {
                     // Obtain the value notified by the sensor.
